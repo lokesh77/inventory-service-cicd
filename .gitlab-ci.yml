@@ -1,0 +1,16 @@
+include:
+  - local: templates/build/python.yml
+  - local: templates/deploy/docker.yml
+  - local: templates/scan/lint.yml
+  - local: templates/test/unit.yml
+  - local: templates/test/integration.yml
+
+stages:
+  - lint
+  - build
+  - test
+  - deploy
+
+variables:
+  PROJECT_NAME: inventory-service
+  DEPLOY_ENVIRONMENTS: dev,staging,prod

@@ -1,0 +1,10 @@
+project_name: "inventory-service"
+language: "python"
+build_tool: "pip"
+test_type: ["unit", "integration"]
+deploy_method: "docker"
+branching: "semantic"
+environments:
+  - dev
+  - staging
+  - prod

@@ -1,0 +1,6 @@
+unit_tests:
+  stage: test
+  image: python:3.9
+  script:
+    - pip install -r requirements.txt
+    - pytest tests/test_unit.py

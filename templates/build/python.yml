@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: python:3.9
+  script:
+    - pip install -r requirements.txt
+    - python setup.py sdist
+  artifacts:
+    paths:
+      - dist/
